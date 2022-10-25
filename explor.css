@@ -3,9 +3,8 @@
 }
 
 body {
-    /* margin: auto; */
-    font-family: Arial, Helvetica, sans-serif;
-    border-right: none;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .header {
@@ -50,19 +49,16 @@ body {
     padding: 0 10px;
 }
 
-/* Remove extra left and right margins, due to padding */
-/* .row {
+.row {
     margin: 0 -5px;
-} */
+}
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Responsive columns */
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
@@ -77,6 +73,20 @@ body {
     margin: auto;
     text-align: center;
     font-family: arial;
+    border-radius: 30px;
+
+}
+
+img {
+    border-radius: 30px 30px 0px 0px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
 }
 
 .price {
@@ -94,6 +104,7 @@ body {
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    border-radius: 0px 0px 30px 30px;
 }
 
 .card button:hover {

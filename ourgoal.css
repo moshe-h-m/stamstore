@@ -1,20 +1,19 @@
 body {
     margin: 0;
     font-family: 'Trebuchet MS', sans-serif;
-
 }
 
 h1 {
     font-size: 80px;
     margin-top: auto;
-    color: cornsilk;
+    color: rgb(244, 218, 72);
     font-family: Tahoma, sans-serif;
 }
 
 p {
     font-size: 30px;
     margin-top: auto;
-    color: rgb(232, 237, 243);
+    color: rgb(222, 168, 92);
     font-family: Tahoma, sans-serif;
 }
 
@@ -62,4 +61,20 @@ html {
 
 .header-right {
     float: right;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
+}
+
+.btn-bd-primary {
+    font-size: xx-large;
+    font-family: Bahnschrift SemiBold, APPEARANCE;
+    appearance: Bahnschrift SemiBold;
+    background-color: rgb(244, 218, 72);
+    border-radius: 10px 10px 10px 10px;
 }

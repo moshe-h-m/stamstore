@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="/createCard.js"></script>
+    <title>Create card</title>
+</head>
+
+
+<div class='container-fluid'>
+    <div class='registration row'>
+        <div class='reg-info col-sm-12 col-md-8'>
+            <img src='/imege/Feather pen logo3.png' class='img img-responsive' />
+            <div>
+                <h2>Create new card</h2>
+            </div>
+        </div>
+        <div class='reg-form col-sm-12 col-md-4'>
+            <div class='card'>
+                <div class='form-group'>
+                    <label for="imageSrc">image src</label>
+                    <input type="text" class="form-control" id="imageSrc">
+                </div>
+                <div class='form-row'>
+                    <div>
+                        <label for="header">Header</label>
+                        <input type="text" class="form-control" id="header">
+                    </div>
+                    <div>
+                        <label for="desc">Description</label>
+                        <input type="text" class="form-control" id="desc">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="submit()">Submit</button>
+            </div>
+        </div>
+    </div>
+    </body>
+
+</html>

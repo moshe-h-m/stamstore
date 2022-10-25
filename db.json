@@ -1,0 +1,22 @@
+{
+  "cards": [
+    {
+      "imgSrc": "r5.png",
+      "header": "moshe",
+      "desc": "i wrote mezuzot",
+      "id": 1
+    },
+    {
+      "imgSrc": "r6.png",
+      "header": "yeuda",
+      "desc": "tefilin only",
+      "id": 2
+    },
+    {
+      "imgSrc": "rav4.png",
+      "header": "david mauda",
+      "desc": "mezuzot tefilin",
+      "id": 3
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-function open(nav) {
+function openpage(nav) {
 
     window.open(nav);
 };

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Teko:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:800|Open+Sans');
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+h2 {
+    font-family: 'Arima Madurai', cursive;
+    color: #22222b;
+
+}
+
+h4 {
+    font-family: 'Teko', sans-serif;
+    color: #22222b;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navigation {
+    background: #22222b;
+}
+
+.navbar-brand {
+    height: 70px;
+}
+
+.navbar-brand img {
+    width: 40%;
+}
+
+.registration {
+    padding: 2%;
+    background: #a0dcf4;
+}
+
+.reg-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.card {
+    flex: 0 0 auto;
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-row div {
+    width: 48%;
+}
+
+#regButton {
+    width: 100%;
+    background: #22222b;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0px -15px;
+    padding: 2%;
+    background: #E0EAFC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.stats i {
+    color: #2d2077;
+    width: 100%;
+    font-size: 30px;
+}
+
+.more-stats .stats {
+    background: white;
+}
+
+#page {
+    margin: 0px -15px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCC;
+    display: flex;
+    flex-wrap: no-wrap;
+}
+
+.pane {
+    flex: 0 0 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #45CCFF;
+}
+
+.pane:nth-child(4n+2) {
+    background-color: #49E83E;
+}
+
+.pane:nth-child(4n+3) {
+    background-color: #EDDE05;
+}
+
+.pane:last-child {
+    background-color: #45CCFF;
+}
+
+.pane:last-child a {
+    background-color: #22222b;
+}

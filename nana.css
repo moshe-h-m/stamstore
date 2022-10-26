@@ -75,11 +75,11 @@ p1 {
 #enter {
     padding: 20px 70px;
     font-size: 30px;
-    color: rgb(54, 6, 174);
+    color: black;
     border-left-style: ridge;
     border-radius: 15px;
     ;
-    background-color: rgb(76, 91, 206);
+    background-color: dodgerblue;
 }
 
 @media screen and (max-width: 500px) {
@@ -98,6 +98,6 @@ footer {
     display: flex;
     justify-content: center;
     padding: 5px;
-    background-color: #45a1ff;
+    background-color: dodgerblue;
     color: #fff;
 }

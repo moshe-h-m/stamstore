@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Trebuchet MS', sans-serif;
+    /* font-family: 'Trebuchet MS', sans-serif; */
 }
 
 h1 {
@@ -15,10 +15,11 @@ p {
     margin-top: auto;
     color: rgb(222, 168, 92);
     font-family: Tahoma, sans-serif;
+    appearance: Tahoma;
 }
 
-body,
-html {
+/* body, */
+.imgbck {
     height: 100%;
     background-image: url(imege/WhatsApp\ Image\ 2022-10-24\ at\ 10.53.24\ AM.jpeg);
     height: 100%;
@@ -27,7 +28,7 @@ html {
     background-position: center;
 }
 
-.header {
+/* .header {
     overflow: hidden;
     background-color: #f1f1f1;
     padding: 10px 20px;
@@ -61,13 +62,50 @@ html {
 
 .header-right {
     float: right;
+} */
+.navbar {
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+}
+
+/* .name {
+    font-size: 16px;
+    color: #e83d16 !important;
+    font-weight: 500
+} */
+
+.navbar-toggler {
+    font-size: 15px
+}
+
+.nav-link {
+    font-size: 14px;
+    color: #000 !important;
+    font-weight: bold;
+    margin-left: 40px
+}
+
+.form-control {
+    height: 32px;
+    width: 100%;
+    border-radius: 20px;
+    color: #c7c6cb;
+    font-size: 1300px;
+    border: none
+}
+
+.nav-link {
+    font-size: 14px;
+    color: #000 !important;
+    font-weight: bold;
+    margin-left: 40px
 }
 
 footer {
     display: flex;
     justify-content: center;
     padding: 5px;
-    background-color: #45a1ff;
+    background-color: dodgerblue;
     color: #fff;
 }
 
@@ -75,6 +113,6 @@ footer {
     font-size: xx-large;
     font-family: Bahnschrift SemiBold, APPEARANCE;
     appearance: Bahnschrift SemiBold;
-    background-color: rgb(244, 218, 72);
+    background-color: dodgerblue;
     border-radius: 10px 10px 10px 10px;
 }

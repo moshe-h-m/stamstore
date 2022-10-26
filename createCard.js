@@ -3,6 +3,8 @@ function submit() {
     const header = document.getElementById('header').value
     const desc = document.getElementById('desc').value
 
+
+
     window.fetch('http://localhost:3000/cards', {
         method: 'POST',
         headers: {
@@ -12,11 +14,19 @@ function submit() {
         body: JSON.stringify({
             imgSrc,
             header,
-            desc
+            desc,
+
+
         })
+
     })
+
+
+
         .then(() => { })
         .catch(console.log)
+    window.alert("dir " + header + " thank you for your regisern!")
+        .then(window.close());
 
 
 }

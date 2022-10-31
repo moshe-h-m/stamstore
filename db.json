@@ -2,57 +2,19 @@
   "cards": [
     {
       "imgSrc": "r5.png",
-      "header": "moshe",
-      "desc": "i wrote mezuzot",
+      "header": "moshe makias",
+      "desc": "i love to write mwzuzuot",
+      "email": "crmakias123@gmail.com",
+      "pasword": "1",
       "id": 1
     },
     {
-      "imgSrc": "r6.png",
-      "header": "yeuda",
-      "desc": "tefilin only",
+      "imgSrc": "rav4.png",
+      "header": "elie temstet",
+      "desc": "i live in Jerusalem ",
+      "email": "elie@gmail.com",
+      "pasword": "123",
       "id": 2
-    },
-    {
-      "imgSrc": "rav4.png",
-      "header": "david mauda",
-      "desc": "mezuzot tefilin",
-      "id": 3
-    },
-    {
-      "imgSrc": "r6.png",
-      "header": "moni",
-      "desc": "mezuzot only",
-      "id": 4
-    },
-    {
-      "imgSrc": "rav3.png",
-      "header": "nechemia ",
-      "desc": "all of this thing",
-      "id": 5
-    },
-    {
-      "imgSrc": "rav4.png",
-      "header": "leron",
-      "desc": "sefer tora",
-      "id": 6
-    },
-    {
-      "imgSrc": "",
-      "header": "",
-      "desc": "",
-      "id": 7
-    },
-    {
-      "imgSrc": "rav.png",
-      "header": "momo",
-      "desc": "seferrr",
-      "id": 8
-    },
-    {
-      "imgSrc": "",
-      "header": "",
-      "desc": "",
-      "id": 9
     }
   ]
 }

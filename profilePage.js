@@ -1,12 +1,4 @@
 function createProfile(imgSrc, header, desc) {
-    // <div id="mystore">
-    //     <img class="userIM" src="/imege/maran.jpg">
-
-
-    //         <div class="d-flex justify-content-center mt-3"> <span class="text text-center">M-A-R-A-N<br> the crown of the
-    //             genertion</span> </div>
-    // </div>
-
 
     const img = document.createElement('img')
     const imgUrl = `./imege/${imgSrc}`

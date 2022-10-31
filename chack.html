@@ -1,23 +1,33 @@
 <!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bootstrap.min.css">
-    <link rel="stylesheet" href="/ourgoal.css">
-    <title>Our gool</title>
+    <title>our team</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/stamstore/swiper-bundle.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/chack.css">
+
 </head>
 
-<body>
+
+<body onload="init()">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid"> <a class="navbar-brand name"></a>
             <div class="left"><a href="/nana.html" class="logo">
                     <img src="imege/Feather pen logo4.png" height="100px" width="100px" alt="sites logo"></a>
             </div>
             <div class="container">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 20px;">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/nana.html">Home</a>
                         </li>
@@ -29,38 +39,36 @@
                 </div>
 
             </div>
-    </nav>
+    </nav><br>
     <center>
-        <div class="goal">
-            <br>
-            <h1 class="_1ix0mx3w">OUR GOAL</h1>
-            <br>
-            <br>
-            <p>Our mission is to enable you to buy holy utensils in the most reliable waywith peace of <br> mind, by
-                buying
-                the
-                products from
-                the SOFER directly and without intermediaries</p>
-        </div>
-        <br><br><br><br><br><br><br>
-        <div class="imgbck">
-            <br><br><br><br><br><br>
-            <div class="d-grid gap-2 col-4 mx-auto">
-                <button class="btn-bd-primary" type="button" style="border: none;"
-                    onclick="openpage('/createCard.html')">Sofer? join
-                    us</button>
-            </div>
-            <br><br><br><br><br><br><br><br>
-        </div>
-
-        <br><br><br><br>
+        <h1 style="font-size:xx-large;">choice your favorite sofer</h1>
     </center>
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper" id="cardwra">
 
-    <footer>
-        <p>© all right server to Yeuda K, Moshe H M, Elie T </p>
-    </footer>
-    <script src="/pageref.js"></script>
+            </div>
+        </div>
 
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+        <br>
+    </div>
+
+    <center>
+        <footer>
+            <p>© all right server to Yeuda K, Moshe H M, Elie T </p>
+        </footer>
+    </center>
 </body>
+
+<!-- Swiper JS -->
+<!--Uncomment this line-->
+<script src="/stamstore/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<!--Uncomment this line-->
+<script src="/chack.js"></script>
 
 </html>

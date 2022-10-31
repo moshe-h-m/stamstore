@@ -1,3 +1,21 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get('id')
+
+function nak() {
+    alert(`trr${id}`);
+    console.log(id)
+}
+function init() {
+    window.fetch('http://localhost:3000/cards')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(sof => {
+                createCard(sof.imgSrc, sof.header, sof.desc, sof.id)
+            })
+        })
+}
+
 function createProfile(imgSrc, header, desc) {
 
     const img = document.createElement('img')

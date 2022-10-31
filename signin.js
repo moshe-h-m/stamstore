@@ -1,6 +1,7 @@
 function signIn() {
     const email2 = document.getElementById('email').value
     const pasword2 = document.getElementById('paswo').value
+    let id
     let var1 = 0;
     window.fetch('http://localhost:3000/cards')
         .then(res => res.json())
@@ -10,6 +11,7 @@ function signIn() {
 
 
                 data.forEach(sof => {
+                    id = sof.id
                     var1 = chackPas(sof.email, sof.pasword)
 
                     if (var1 === 1) {
@@ -33,7 +35,7 @@ function signIn() {
 
     function chackPas(email, password) {
         if ((email == email2) && (password === pasword2)) {
-            location.replace("./orders.html");
+            location.replace(`http://localhost:3000/cards/${id}`);
             throw 1;
         }
 

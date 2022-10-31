@@ -1,3 +1,78 @@
+//בעל החנות (סופר)
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get('id')
+
+let imgSrc; let header; let desc; let email; let pasword;
+
+
+function init() {
+    window.fetch('http://localhost:3000/cards')
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(sof => {
+                if (id == sof.id) {
+                    imgSrc = sof.imgSrc
+                    header = sof.header
+                    desc = sof.desc
+                    email = sof.email
+                    pasword = sof.pasword
+                    createProfile(sof.imgSrc, sof.header, sof.desc, sof.email)
+                }
+            })
+        })
+}
+
+function createProfile(imgSrc, header, desc, email) {
+
+
+    const img = document.createElement('img')
+    const imgUrl = `./imege/${imgSrc}`
+    img.src = imgUrl
+    img.className = "userIM"
+
+    const nameDiv = document.createElement('div')
+    nameDiv.className = "header"
+
+    const newDiv = document.createElement('div')
+    newDiv.className = "header"
+
+    const nameSpan = document.createElement('h1')
+    nameSpan.innerText = header
+
+    const desSpan = document.createElement('span')
+    desSpan.className = 'spanan'
+    desSpan.innerText = desc
+
+    const br1 = document.createElement('br')
+
+    const pan = document.createElement('span')
+    pan.className = 'spanan'
+    pan.innerText = `Contact via email: ${email}`
+
+    nameDiv.innerHTML += nameSpan.outerHTML
+    // nameDiv.innerHTML += br1.outerHTML
+    nameDiv.innerHTML += desSpan.outerHTML
+    nameDiv.innerHTML += br1.outerHTML
+    nameDiv.innerHTML += br1.outerHTML
+    nameDiv.innerHTML += pan.outerHTML
+
+    newDiv.innerHTML += img.outerHTML
+    newDiv.innerHTML += nameDiv.outerHTML
+
+    const divune = document.getElementById("mystore")
+    divune.appendChild(newDiv)
+
+
+
+
+
+
+
+
+}
+
+//סל הקניות
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartDOM = document.querySelector('.cart');
 const addToCartButtonsDOM = document.querySelectorAll('[data-action="ADD_TO_CART"]');
@@ -144,10 +219,10 @@ function clearCart() {
         addToCartButtonDOM.disabled = false;
     });
 }
-
+let order_items;
 function checkout() {
     let paypalFormHTML = `
-    <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr"  method="post">
       <input type="hidden" name="cmd" value="_cart">
       <input type="hidden" name="upload" value="1">
       <input type="hidden" name="business" value="adrian@webdev.tube">
@@ -155,6 +230,7 @@ function checkout() {
 
     cart.forEach((cartItem, index) => {
         ++index;
+        order_items += `item: ${cartItem.name} * ${cartItem.quantity}; `
         paypalFormHTML += `
       <input type="hidden" name="item_name_${index}" value="${cartItem.name}">
       <input type="hidden" name="amount_${index}" value="${cartItem.price}">
@@ -168,17 +244,50 @@ function checkout() {
     <div class="overlay"></div>
   `;
 
+
     document.querySelector('body').insertAdjacentHTML('beforeend', paypalFormHTML);
-    document.getElementById('paypal-form').submit();
+    document.getElementById('paypal-form').submit(sendOrder());
+
+
+
 }
 
 function countCartTotal() {
     let cartTotal = 0;
     cart.forEach(cartItem => (cartTotal += cartItem.quantity * cartItem.price));
+
     document.querySelector('[data-action="CHECKOUT"]').innerText = `Pay $${cartTotal}`;
+
 }
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~
+function sendOrder() {
+    let url = `http://localhost:3000/cards/${id}`
+    window.fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }, body: JSON.stringify({
+            imgSrc,
+            header,
+            desc,
+            email,
+            pasword,
+            order_items
+        })
+    })
+    // .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data.order_items)
+    //     })
+}
+
+
 
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
+
     countCartTotal();
+
 }

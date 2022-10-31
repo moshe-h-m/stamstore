@@ -1,20 +1,61 @@
 {
   "cards": [
     {
-      "imgSrc": "r5.png",
-      "header": "moshe makias",
-      "desc": "i love to write mwzuzuot",
-      "email": "crmakias123@gmail.com",
-      "pasword": "1",
+      "imgSrc": "rav4.png",
+      "header": "moshe marzbach",
+      "desc": "i writing mezuzot in happiness ",
+      "email": "mosheMar@gmail.com",
+      "pasword": "1234",
+      "order_items": "undefineditem: Megila * 1; item: Bee't Tefilin * 1; item: Parsheeiot Tefilin * 1; item: P'eetum H'aktoret * 1; item: Sefer Tora * 1; item: Mezuza * 1; ",
       "id": 1
     },
     {
-      "imgSrc": "rav4.png",
+      "imgSrc": "elie.jpeg",
       "header": "elie temstet",
-      "desc": "i live in Jerusalem ",
+      "desc": "i live in Jerusalem and love to make batei tefilin",
       "email": "elie@gmail.com",
-      "pasword": "123",
+      "pasword": "12345",
       "id": 2
+    },
+    {
+      "imgSrc": "yeuda.jpeg",
+      "header": "yeuda hatotach ",
+      "desc": "the king is very busy only WhatsApp  ",
+      "email": "yk@gmail.com",
+      "pasword": "1212",
+      "id": 3
+    },
+    {
+      "imgSrc": "shuli.jpeg",
+      "header": "shuli not depressed ",
+      "desc": "i'm married finally i do talitot",
+      "email": "shuli.michal@yalla.com",
+      "pasword": "1000",
+      "id": 4
+    },
+    {
+      "imgSrc": "yami.jpeg",
+      "header": "zecharia zanany",
+      "desc": "I write backwards because in our village we read straight",
+      "email": "zaki@el-kaida.org",
+      "pasword": "3456",
+      "id": 5
+    },
+    {
+      "imgSrc": "moshe.png",
+      "header": "mosh maki",
+      "desc": "all the day sefer tora sefer tora sefer tora ..........",
+      "email": "moshe@columan.row.ac.cs.org.il",
+      "pasword": "5433",
+      "id": 6
+    },
+    {
+      "imgSrc": "efi.jpeg",
+      "header": "effi'le profus",
+      "desc": "I love teaching and I love my students and their amazing projects",
+      "email": "effi@gmail.com",
+      "pasword": "2342",
+      "id": 7
     }
   ]
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -58,24 +60,8 @@ html {
     background-position: center;
 }
 
-h1 {
-    font-family: 'Trebuchet MS',
-        sans-serif, Times, serif;
-    font-size: 60px;
-    line-height: 2;
-    font-weight: 6px;
-    color: rgb(242, 97, 97);
 
-}
 
-p1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 60px;
-    color: rgb(196, 210, 213);
-    font-style: italic;
-    font-weight: bolder;
-
-}
 
 #enter {
     padding: 20px 70px;
@@ -137,9 +123,22 @@ p1 {
     }
 }
 
+p2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    line-height: 2;
+    font-weight: bolder;
+    color: rgb(208, 55, 55);
+
+}
+
 p1 {
-    color: lawngreen;
-    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: rgb(244, 245, 246);
+    font-style: italic;
+    font-weight: bold;
+
 }
 
 footer {

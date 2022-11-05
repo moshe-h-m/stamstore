@@ -4,9 +4,9 @@
       "imgSrc": "rav4.png",
       "header": "moshe marzbach",
       "desc": "i writing mezuzot in happiness ",
-      "email": "mosheMar@gmail.com",
+      "email": "crmakias123@gmail.com",
       "pasword": "1234",
-      "order_items": "undefineditem: Megila * 1; item: Bee't Tefilin * 1; item: Parsheeiot Tefilin * 1; item: P'eetum H'aktoret * 1; item: Sefer Tora * 1; item: Mezuza * 1; ",
+      "order_items": " item: Sefer Tora * 1; ",
       "id": 1
     },
     {
@@ -15,23 +15,16 @@
       "desc": "i live in Jerusalem and love to make batei tefilin",
       "email": "elie@gmail.com",
       "pasword": "12345",
+      "order_items": " item: Sefer Tora * 1; item: T'alit * 8; item: P'eetum H'aktoret * 1; item: Bee't Tefilin * 1; ",
       "id": 2
     },
     {
       "imgSrc": "yeuda.jpeg",
-      "header": "yeuda hatotach ",
-      "desc": "the king is very busy only WhatsApp  ",
-      "email": "yk@gmail.com",
-      "pasword": "1212",
-      "id": 3
-    },
-    {
-      "imgSrc": "shuli.jpeg",
-      "header": "shuli not depressed ",
-      "desc": "i'm married finally i do talitot",
-      "email": "shuli.michal@yalla.com",
-      "pasword": "1000",
-      "id": 4
+      "header": "yeuda hatotach",
+      "desc": "i love writing megilot because it's remembered PURIM",
+      "email": "yud@gmail.com",
+      "pasword": "123",
+      "id": 9
     },
     {
       "imgSrc": "yami.jpeg",
@@ -39,6 +32,7 @@
       "desc": "I write backwards because in our village we read straight",
       "email": "zaki@el-kaida.org",
       "pasword": "3456",
+      "order_items": " item: P'eetum H'aktoret * 9; item: Parsheeiot Tefilin * 11; ",
       "id": 5
     },
     {
@@ -47,6 +41,7 @@
       "desc": "all the day sefer tora sefer tora sefer tora ..........",
       "email": "moshe@columan.row.ac.cs.org.il",
       "pasword": "5433",
+      "order_items": "undefineditem: Bee't Tefilin * 1; item: P'eetum H'aktoret * 1; ",
       "id": 6
     },
     {
@@ -55,7 +50,26 @@
       "desc": "I love teaching and I love my students and their amazing projects",
       "email": "effi@gmail.com",
       "pasword": "2342",
+      "order_items": " item: Sefer Tora * 1; item: T'alit * 1; ",
       "id": 7
+    },
+    {
+      "imgSrc": "lau.jpeg",
+      "header": "david lau",
+      "desc": "rav rashi",
+      "email": "lau@gmail.com",
+      "pasword": "1234",
+      "id": 8
+    }
+  ],
+  "orders": [
+    {
+      "header": "moshe marzbach",
+      "sofer_id": "1",
+      "email": "crmakias123@gmail.com",
+      "pasword": "1234",
+      "order_items": " \nitem 1 : Bee't Tefilin * 3; \nitem 2 : P'eetum H'aktoret * 2; \nitem 3 : Sefer Tora * 2; ",
+      "id": 1
     }
   ]
 }

@@ -1,77 +1,154 @@
 <!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bootstrap.min.css">
-    <script src="/createCard.js"></script>
-    <title>Create card</title>
+    <title>our team</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/stamstore/swiper-bundle.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="/chack.css">
+
 </head>
 
-<center>
 
-    <body style="background-color:#EFEFEF;;">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid"> <a class="navbar-brand name"></a>
-                <div class="left"><a href="/nana.html" class="logo">
-                        <img src="imege/Feather pen logo4.png" height="100px" width="100px" alt="sites logo"></a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid"> <a class="navbar-brand name"></a>
+            <div class="left"><a href="/nana.html" class="logo">
+                    <img src="imege/Feather pen logo4.png" height="100px" width="100px" alt="sites logo"></a>
+            </div>
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 20px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/nana.html">Home</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="/chack.html">Sofrim</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/ourgool.html">Our Goal</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/createCard.html">Join us</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/sighnin.html">Sign in</a> </li>
+                    </ul>
                 </div>
-                <div class="container">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"> <a class="nav-link active" aria-current="page"
-                                    href="/nana.html">Home</a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="/chack.html">Sofrim</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="/ourgool.html">Our Goal</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="/createCard.html">Join us</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="/sighnin.html">Sign in</a> </li>
-                        </ul>
+
+            </div>
+    </nav><br>
+    <center>
+
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                                <form>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="header" class="form-control form-control-lg"
+                                            placeholder=" please enter full name" />
+                                        <label class="form-label" for="form3Example1cg">Your Name</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="email" class="form-control form-control-lg"
+                                            placeholder=" please enter email adresse" />
+                                        <label class="form-label" for="form3Example3cg">Your Email</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="paswo" class="form-control form-control-lg"
+                                            placeholder=" please enter password" />
+                                        <label class="form-label" for="form3Example4cg">Password</label>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="desc" class="form-control form-control-lg"
+                                            placeholder="tall us a bit about you" />
+                                        <label class="form-label" for="form3Example4cg">about me</label>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="file" id="imageSrc" class="form-control form-control-lg"
+                                            placeholder=" please enter image profile" />
+                                        <label class="form-label" for="form3Example4cg">Image</label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <button id="btn1" class="button" onclick="submit()">Register</button>
+                                    </div>
+
+
+                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a
+                                            href="/sighnin.html" class="fw-bold text-body"><u>Login here</u></a></p>
+
+                                </form>
+
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-        </nav><br><br>
-        <div>Creat your profile</div><br><br>
+
+                </section>
+
+
+                <!-- <h1 style="font-size:xx-large;">creat your profile</h1>
+
+        <br><br>
         <div class='reg-form col-sm-12 col-md-4'>
-            <div class='card'>
+            <div class='card' style="border-radius: 5px; z-index: 10 !important;">
 
                 <div class='form-row'>
                     <div>
                         <label for="header">your full name</label>
-                        <input type="text" class="form-control" id="header">
+                        <input type="text" class="form-control" name="name" required minlength="4" maxlength="8"
+                            size="10" id="header">
                     </div>
                     <div>
                         <label for="desc">a litlle bit about you</label>
                         <input type="text" class="form-control" id="desc">
                     </div>
                     <div>
-                        <label for="desc">your email</label>
+                        <label for="email">your email</label>
                         <input type="text" class="form-control" id="email">
                     </div>
                     <div>
-                        <label for="desc">pasword</label>
+                        <label for="pasword">pasword</label>
                         <input type="text" class="form-control" id="paswo">
                     </div>
                     <div class='form-group'>
-                        <label for="imageSrc">your image</label>
-                        <input type="text" class="form-control" id="imageSrc">
+                        <label for="avatar">Choose a profile picture:</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
                     </div>
-                    <!-- <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"> -->
+                    <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg"> 
 
                 </div>
 
                 <button class="btn btn-primary" onclick="submit()">Submit</button>
             </div>
         </div>
+        <br><br><br><br> -->
+    </center>
 
-
-</center>
-<br><br><br><br>
-<footer>
-    <p>© all right server to Yeuda K, Moshe H M, Elie T </p>
-</footer>
+    <center>
+        <footer>
+            <p>© all right server to Yeuda K, Moshe H M, Elie T </p>
+        </footer>
+    </center>
 </body>
+
+<!-- Swiper JS -->
+<!--Uncomment this line-->
+<!-- <script src="/stamstore/swiper-bundle.min.js"></script> -->
+
+<!-- JavaScript -->
+<!--Uncomment this line-->
+<script src="/createCard.js"></script>
+<!-- <script src="/profilePage.js"></script> -->
 
 </html>

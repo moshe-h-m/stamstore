@@ -1,13 +1,16 @@
+
 function submit() {
-    const imgSrc = document.getElementById('imageSrc').value
+
+
+    const imgres = document.getElementById('imageSrc').value
     const header = document.getElementById('header').value
     const desc = document.getElementById('desc').value
     const email = document.getElementById('email').value
     const pasword = document.getElementById('paswo').value
+    let imgSrc = imgres.slice(12);
 
 
-
-    if (imgSrc && header && desc && email && paswo) {
+    if (imgSrc && header && desc && email && pasword) {
         window.fetch('http://localhost:3000/cards', {
             method: 'POST',
             headers: {
@@ -48,3 +51,4 @@ function submit() {
     }
 
 }
+document.getElementById("btn1").onclick = submit;

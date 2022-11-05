@@ -1,6 +1,6 @@
 
 var swiper = new Swiper(".slide-content", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 25,
     loop: true,
     centerSlide: 'true',
@@ -34,8 +34,8 @@ var swiper = new Swiper(".slide-content", {
     <div class="image-content">
         <span class="overlay"></span>
 
-        <div class="card-image">
-            <!--<img src="images/profile8.jpg" alt="" class="card-img">-->
+        <div class="card-image"><a >
+            <!--<img src="images/profile8.jpg" alt="" class="card-img">--></a>
         </div>
     </div>
 

@@ -132,6 +132,26 @@ footer {
     background-color: #4070F4;
 }
 
+
+.form-control {
+    height: 3px;
+    width: 5px;
+    border-radius: 5px;
+    color: #3003e2;
+    font-size: 3px;
+    border: #3003e2
+}
+
+.header {
+    height: 3px;
+    width: 5px;
+    border-radius: 5px;
+    color: #3003e2;
+    font-size: 3px;
+    border: #3003e2
+}
+
+
 @media screen and (max-width: 768px) {
     .slide-content {
         margin: 0 10px;
@@ -154,28 +174,59 @@ footer {
 } */
 
 .navbar-toggler {
-    font-size: 15px
+    font-size: 20px
 }
 
 .nav-link {
-    font-size: 14px;
+    font-size: 20px;
     color: #000 !important;
     font-weight: bold;
     margin-left: 40px
 }
 
 .form-control {
-    height: 32px;
+    height: 3px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 2px;
     color: #c7c6cb;
-    font-size: 1300px;
-    border: none
+    font-size: 13px;
+
 }
 
 .nav-link {
-    font-size: 14px;
+    font-size: 20px;
     color: #000 !important;
     font-weight: bold;
     margin-left: 40px
+}
+
+/*login page*/
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f1f1f1;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+.imgbck {
+    height: 100%;
+    background-image: url(/imege/WhatsApp\ Image\ 2022-10-24\ at\ 10.53.24\ AM.jpeg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.backg {
+    height: 100%;
+    background-image: url(imege/sefer\ design\ \(pdf.io\).jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

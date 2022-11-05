@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -16,6 +23,17 @@ hed {
 .navbar {
     background-color: #f1f1f1;
     padding: 20px 10px;
+}
+
+.navbar-toggler {
+    font-size: 20px
+}
+
+.nav-link {
+    font-size: 20px;
+    color: #000 !important;
+    font-weight: bold;
+    margin-left: 40px
 }
 
 :root {

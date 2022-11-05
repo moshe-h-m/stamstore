@@ -1,65 +1,126 @@
 <!DOCTYPE html>
+
+
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/bootstrap.min.css">
-    <link rel="stylesheet" href="/signin.css">
-    <title>Sign in</title>
+    <title>our team</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/stamstore/swiper-bundle.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/chack.css">
+
 </head>
 
-<center>
 
-
+<body onload="init()">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid"> <a class="navbar-brand name"></a>
             <div class="left"><a href="/nana.html" class="logo">
                     <img src="imege/Feather pen logo4.png" height="100px" width="100px" alt="sites logo"></a>
             </div>
             <div class="container">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 20px;">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"> <a class="nav-link active" aria-current="page" href="/nana.html">Home</a>
                         </li>
                         <li class="nav-item"> <a class="nav-link" href="/chack.html">Sofrim</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/ourgool.html">Our Goal</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/createCard.html">Join us</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/sighnin.html">Sign in</a> </li>
                     </ul>
                 </div>
 
             </div>
-    </nav><br><br>
+    </nav>
+    <center>
 
-    <div>Sign in</div><br><br><br>
-    <div class='reg-form col-sm-12 col-md-4'>
-        <div class='card'>
+        <section class="vh-100 ">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card shadow-2-strong" style="border-radius: 1rem; height: 400px; width: 400px;">
+                            <div class="card-body p-5 text-center">
 
-            <div class='form-row'>
+                                <div class="mb-md-3 mt-md-4 pb-5">
 
-                <div>
-                    <label for="desc">your email</label>
-                    <input type="text" class="form-control" id="email">
+                                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                                    <p class="text-50 mb-1">Please enter your email and password!</p>
+
+                                    <div class="form-outline  mb-1">
+                                        <input type="email" id="typeEmailX" class="form-control form-control-lg"
+                                            style="border: black ; " placeholder=" please enter your email" />
+                                        <label class="form-label" for="typeEmailX">Email</label>
+                                    </div>
+
+                                    <div class="form-outline form-white mb-1">
+                                        <input type="password" id="typePasswordX" class="form-control form-control-lg"
+                                            placeholder=" please enter password" />
+                                        <label class="form-label" for="typePasswordX">Password</label>
+                                    </div>
+
+
+                                    <button class="btn btn-outline-primary btn-lg px-5" type="submit"
+                                        onclick="signIn()">Login</button>
+
+                                </div>
+
+                                <div>
+                                    <p class="mb-0">Don't have an account? <a href="/createCard.html"
+                                            class="text-50 fw-bold">Sign
+                                            Up</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label for="desc">pasword</label>
-                    <input type="text" class="form-control" id="paswo">
-                </div>
-
             </div>
+        </section>
+        <!-- <br><br><br><br><br>
+        <div class='reg-form col-sm-12 col-md-4'>
+            <div class='card' style="border-radius: 5px;">
 
-            <button class="btn btn-primary" onclick="signIn()">Sign in!</button>
+                <div class='form-row'>
+
+                    <div>
+                        <label for="email">your email</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div>
+                        <label for="pasword">pasword</label>
+                        <input type="text" class="form-control" id="paswo">
+                    </div>
+
+                </div>
+
+                <button class="btn btn-primary" onclick="submit()">Sign in</button>
+            </div>
         </div>
-    </div>
-
-
-</center>
-<br><br><br><br><br><br><br><br><br><br>
-<footer>
-    <p>© all right server to Yeuda K, Moshe H M, Elie T </p>
-</footer>
-<script src="/signin.js"></script>
+        <br><br><br><br><br><br><br> -->
+    </center>
+    <center>
+        <footer>
+            <p>© all right server to Yeuda K, Moshe H M, Elie T </p>
+        </footer>
+    </center>
 </body>
+
+<!-- Swiper JS -->
+<!--Uncomment this line-->
+<script src="/stamstore/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<!--Uncomment this line-->
+<script src="/signin.js"></script>
+
 
 </html>

@@ -39,16 +39,7 @@ function createCard(imgSrc, header, desc) {
         alert("dyyy");
     }
 
-    // btn.addEventListener('click', function me() {
-    //     window.open('/profilePage.html')
-    // });
-    // btn.onclick = function (imgSrc, header, desc) {
-    //     createProfile(imgSrc, header, desc);
-    //     window.open('/profilePage.html/?id=4')
-    // };
-    // for (const sElement of btn.formAction = '/profilePage.html') {
 
-    // }
 
     cardDiv.innerHTML += img.outerHTML
     cardDiv.innerHTML += h1.outerHTML

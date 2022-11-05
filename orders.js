@@ -3,7 +3,12 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id')
 
-let imgSrc; let header; let desc; let email; let pasword;
+let imgSrc;
+let header;
+let desc;
+let email;
+let pasword;
+
 
 
 function init() {
@@ -48,7 +53,7 @@ function createProfile(imgSrc, header, desc, email) {
 
     const pan = document.createElement('span')
     pan.className = 'spanan'
-    pan.innerText = `Contact via email: ${email}`
+    pan.innerText = `Contact via email:   ${email}`
 
     nameDiv.innerHTML += nameSpan.outerHTML
     // nameDiv.innerHTML += br1.outerHTML
@@ -195,12 +200,13 @@ function addCartFooter() {
       <div class="cart-footer">
         <button class="btn btn--danger" data-action="CLEAR_CART">Clear Cart</button>
         <button class="btn btn--primary" data-action="CHECKOUT">Send an offer</button>
+        
       </div>
     `
         );
 
         document.querySelector('[data-action="CLEAR_CART"]').addEventListener('click', () => clearCart());
-        document.querySelector('[data-action="CHECKOUT"]').addEventListener('click', () => checkout());
+        document.querySelector('[data-action="CHECKOUT"]').addEventListener('click', () => { sendOrder() });
     }
 }
 
@@ -219,71 +225,117 @@ function clearCart() {
         addToCartButtonDOM.disabled = false;
     });
 }
-let order_items;
-function checkout() {
-    let paypalFormHTML = `
-    <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr"  method="post">
-      <input type="hidden" name="cmd" value="_cart">
-      <input type="hidden" name="upload" value="1">
-      <input type="hidden" name="business" value="adrian@webdev.tube">
-  `;
-
-    cart.forEach((cartItem, index) => {
-        ++index;
-        order_items += `item: ${cartItem.name} * ${cartItem.quantity}; `
-        paypalFormHTML += `
-      <input type="hidden" name="item_name_${index}" value="${cartItem.name}">
-      <input type="hidden" name="amount_${index}" value="${cartItem.price}">
-      <input type="hidden" name="quantity_${index}" value="${cartItem.quantity}">
-    `;
-    });
-
-    paypalFormHTML += `
-      <input type="submit" value="PayPal">
-    </form>
-    <div class="overlay"></div>
-  `;
+let order_items = ' ';
+let sofer_name = header
+let sofer_id = id
+let paypalFormHTML
 
 
-    document.querySelector('body').insertAdjacentHTML('beforeend', paypalFormHTML);
-    document.getElementById('paypal-form').submit(sendOrder());
+// function checkout() {
+//     paypalFormHTML = `
+//         <form id="paypal-form" action="https://www.paypal.com" action="mailto:${email}"  method="post">
+//           <input type="hidden" name="cmd" value="_cart">
+//           <input type="hidden" name="upload" value="1">
+//           <input type="hidden" name="business" value="adrian@webdev.tube">
+//       `;
+
+//     cart.forEach((cartItem, index) => {
+//         ++index;
+
+//         paypalFormHTML += `
+//           <input type="hidden" name="item_name_${index}" value="${cartItem.name}">
+//           <input type="hidden" name="amount_${index}" value="${cartItem.price}">
+//           <input type="hidden" name="quantity_${index}" value="${cartItem.quantity}">
+//         `;
+//     });
+
+//     paypalFormHTML += `
+//           <input type="submit" value="PayPal">
+//         </form>
+//         <div class="overlay"></div>
+//       `;
 
 
 
-}
+//     document.querySelector('body').insertAdjacentHTML('beforeend', paypalFormHTML);
+//     document.getElementById('paypal-form').submit();
+
+
+
+// }
 
 function countCartTotal() {
     let cartTotal = 0;
     cart.forEach(cartItem => (cartTotal += cartItem.quantity * cartItem.price));
 
-    document.querySelector('[data-action="CHECKOUT"]').innerText = `Pay $${cartTotal}`;
+    document.querySelector('[data-action="CHECKOUT"]').innerText = ` Send an order $${cartTotal}`;
 
 }
+
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~
 function sendOrder() {
-    let url = `http://localhost:3000/cards/${id}`
-    window.fetch(url, {
-        method: 'PUT',
+    // let url = `http://localhost:3000/cards/${id}`
+    // const data = await fetch(url, {
+    //     method: 'PUT',
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json'
+    //     }, body: JSON.stringify({
+    //         imgSrc,
+    //         header,
+    //         desc,
+    //         email,
+    //         pasword,
+    //         order_items
+    //     })
+    // })
+    // ````
+    cart.forEach((cartItem, index) => {
+        ++index
+        order_items += `\nitem ${index} : ${cartItem.name} * ${cartItem.quantity}; `
+
+
+    });
+    window.fetch('http://localhost:3000/orders', {
+
+        method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-        }, body: JSON.stringify({
-            imgSrc,
+        },
+        body: JSON.stringify({
+
             header,
-            desc,
+            sofer_id,
             email,
             pasword,
-            order_items
+            order_items,
+
+
         })
+
     })
-    // .then(res => res.json())
-    //     .then(data => {
-    //         console.log(data.order_items)
-    //     })
+        .then(res => res.json())
+        .then(data => {
+            window.alert(` thank you for your order your order sent to ${data.sofer_name}   prees ok to verify`)
+            // data.forEach(sof => {
+            //     if (email == sof.email) {
+            //         window.alert("this email is alrady exist, please sign in or use other mail adrees");
+            //     }
+            // })
+            clearCart()
+        })
+
+
+        .then((e) => { })
+        .catch(console.log(e))
+
+
+
 }
 
-
+//sendOrder()
 
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -291,3 +343,12 @@ function saveCart() {
     countCartTotal();
 
 }
+
+
+
+//אנחנו צריכים שהמידע יכנס וגם שישלח אותנו לפייפל
+//2  מתי שאני רוצה לכתוב לHTML למה אני לא מקבל את הנתונים מהשרת??
+//3 איך לחבר למונגו
+
+
+// ``````````````````````
